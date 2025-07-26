@@ -36,11 +36,14 @@
   </div>
   
   <!--
+  Če želiš ponovno aktivirati zaščito z geslom, odkomentiraj spodnji JavaScript:
+
   <script>
     var geslo = prompt("Za dostop vnesi geslo:");
     if (geslo === "eva123") {
       document.getElementById("vsebina").style.display = "block";
     } else {
+      document.getElementById("vsebina").style.display = "none";
       document.getElementById("napaka").style.display = "block";
     }
   </script>
