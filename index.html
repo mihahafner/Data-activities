@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moja testna stran</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     #vsebina {
-      display: block;
+      display: none;
     }
+
     #napaka {
       display: none;
       color: red;
@@ -35,18 +36,25 @@
     Dostop zavrnjen – napačno geslo.
   </div>
 
-  <!--
-  Če želiš ponovno aktivirati zaščito z geslom, odkomentiraj spodnji JavaScript:
-
   <script>
-    var geslo = prompt("Za dostop vnesi geslo:");
-    if (geslo === "eva123") {
+    // 🔐 AKTIVNA ZAŠČITA Z GESLOM
+    window.onload = function () {
+      var geslo = prompt("Za dostop vnesi geslo:");
+      if (geslo === "eva123") {
+        document.getElementById("vsebina").style.display = "block";
+      } else {
+        document.getElementById("napaka").style.display = "block";
+      }
+    };
+
+    /*
+    // 🔕 ALTERNATIVA: Če želiš stran začasno odpreti brez gesla,
+    // zakomentiraj zgornji `window.onload` in odkomentiraj tole:
+
+    window.onload = function () {
       document.getElementById("vsebina").style.display = "block";
-    } else {
-      document.getElementById("vsebina").style.display = "none";
-      document.getElementById("napaka").style.display = "block";
-    }
+    };
+    */
   </script>
-  -->
 </body>
 </html>
