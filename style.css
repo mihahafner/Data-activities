@@ -1,24 +1,28 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #eef;
   color: #333;
-  margin: 20px;
+  margin: 0;
+  padding: 20px;
 }
 
 header {
-  background-color: #0044cc;
+  background-color: #4a90e2;
   color: white;
   padding: 20px;
-  border-radius: 5px;
+  text-align: center;
 }
 
 main {
-  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 8px;
 }
 
 footer {
-  margin-top: 40px;
-  font-size: 0.9em;
   text-align: center;
+  margin-top: 30px;
   color: #777;
+  font-size: 0.9em;
 }
