@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     #vsebina {
-      display: none;
+      display: block;
     }
 
     #napaka {
@@ -37,25 +37,24 @@
   </div>
 
   <script>
-    // 🔐 AKTIVNA ZAŠČITA Z GESLOM
+    // 🔓 Trenutno je geslo onemogočeno – vsebina se vedno prikaže
+    window.onload = function () {
+      document.getElementById("vsebina").style.display = "block";
+    };
+
     /*
+    // 🔐 Če želiš spet vklopiti zaščito z geslom, odkomentiraj to:
+
     window.onload = function () {
       var geslo = prompt("Za dostop vnesi geslo:");
       if (geslo === "eva123") {
         document.getElementById("vsebina").style.display = "block";
       } else {
+        document.getElementById("vsebina").style.display = "none";
         document.getElementById("napaka").style.display = "block";
       }
     };
     */
-    
-    // 🔕 ALTERNATIVA: Če želiš stran začasno odpreti brez gesla,
-    // zakomentiraj zgornji `window.onload` in odkomentiraj tole:
-
-    window.onload = function () {
-      document.getElementById("vsebina").style.display = "block";
-    };
-    
   </script>
 </body>
 </html>
