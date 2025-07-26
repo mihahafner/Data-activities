@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moja testna stran</title>
   <link rel="stylesheet" href="style.css">
-
   <script>
-    // Zaščita z geslom
     var dovoljeno = false;
     var geslo = prompt("Za dostop vnesi geslo:");
     if (geslo === "eva123") {
@@ -21,17 +19,17 @@
 <body>
   <script>
     if (dovoljeno) {
-      document.write(\`
-        <header>
-          <h1>Dobrodošel na testni strani!</h1>
-        </header>
-        <main>
-          <p>To je prva testna stran od Eve.</p>
-        </main>
-        <footer>
-          <p>&copy; 2025 MojeIme</p>
-        </footer>
-      \`);
+      document.write(
+        "<header>" +
+        "<h1>Dobrodošel na testni strani!</h1>" +
+        "</header>" +
+        "<main>" +
+        "<p>To je prva testna stran od Eve.</p>" +
+        "</main>" +
+        "<footer>" +
+        "<p>&copy; 2025 MojeIme</p>" +
+        "</footer>"
+      );
     }
   </script>
 </body>
