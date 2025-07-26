@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moja testna stran</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    var dovoljeno = false;
-    var geslo = prompt("Za dostop vnesi geslo:");
-    if (geslo === "eva123") {
-      dovoljeno = true;
-    } else {
-      alert("Napačno geslo. Dostop zavrnjen.");
-      document.write("<h2>Dostop zavrnjen.</h2>");
+  <style>
+    #vsebina {
+      display: none;
     }
-  </script>
+    #napaka {
+      display: none;
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
 </head>
 <body>
+  <div id="vsebina">
+    <header>
+      <h1>Dobrodošel na testni strani!</h1>
+    </header>
+    <main>
+      <p>To je prva testna stran od Eve.</p>
+    </main>
+    <footer>
+      <p>&copy; 2025 MojeIme</p>
+    </footer>
+  </div>
+
+  <div id="napaka">
+    Dostop zavrnjen – napačno geslo.
+  </div>
+
   <script>
-    if (dovoljeno) {
-      document.write(
-        "<header>" +
-        "<h1>Dobrodošel na testni strani!</h1>" +
-        "</header>" +
-        "<main>" +
-        "<p>To je prva testna stran od Eve.</p>" +
-        "</main>" +
-        "<footer>" +
-        "<p>&copy; 2025 MojeIme</p>" +
-        "</footer>"
-      );
+    var geslo = prompt("Za dostop vnesi geslo:");
+    if (geslo === "eva123") {
+      document.getElementById("vsebina").style.display = "block";
+    } else {
+      document.getElementById("napaka").style.display = "block";
     }
   </script>
 </body>
