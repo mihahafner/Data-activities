@@ -1,28 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #eef;
-  color: #333;
-  margin: 0;
-  padding: 20px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
 }
-
 header {
-  background-color: #4a90e2;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background: #004d66;
+    color: white;
+    padding: 1em;
+    text-align: center;
 }
-
 main {
-  padding: 20px;
-  background-color: white;
-  margin-top: 10px;
-  border-radius: 8px;
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+}
+h1, h2 {
+    margin-bottom: 0.5em;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 0.5em 0;
+}
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
 }
 
-footer {
-  text-align: center;
-  margin-top: 30px;
-  color: #777;
-  font-size: 0.9em;
-}
+/* script.js */
+// Trenutno prazno – pripravljeno za interaktivne funkcije
+console.log("JavaScript datoteka je naložena.");
