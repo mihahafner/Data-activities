@@ -1,60 +1,115 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moja testna stran</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    #vsebina {
-      display: block;
-    }
-
-    #napaka {
-      display: none;
-      color: red;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 100px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O blogu - Data Engineering</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="vsebina">
     <header>
-      <h1>Dobrodošel na testni strani!</h1>
+        <h1>Data Engineering</h1>
+        <p>Miha Hafner, R&D engineer, Elea iC</p>
     </header>
+
     <main>
-      <p>To je prva testna stran od Eve.</p>
+        <section>
+            <h2>O blogu</h2>
+            <p>Na tem blogu delim izkušnje in spoznanja [...] <a href="izzivi-aec.html">[KLIK]</a></p>
+        </section>
+
+        <section>
+            <h2>Področja Data Engineering</h2>
+            <ul>
+                <li><a href="optimisation-case-1.html">Optimisation case 1 [KLIK]</a></li>
+                <li><a href="optimisation-case-2.html">Optimisation case 2 [KLIK]</a></li>
+                <li><a href="analysis-case-1.html">Data Analysis 1 [KLIK]</a></li>
+                <li><a href="analysis-case-2.html">Data Analysis 2 [KLIK]</a></li>
+                <li><a href="processes-case-1.html">Processes 1 [KLIK]</a></li>
+                <li><a href="processes-case-2.html">Processes 2 [KLIK]</a></li>
+                <li><a href="architecture-case-1.html">Architecture 1 [KLIK]</a></li>
+                <li><a href="architecture-case-2.html">Architecture 2 [KLIK]</a></li>
+            </ul>
+        </section>
     </main>
-    <footer>
-      <p>&copy; 2025 MojeIme</p>
-    </footer>
-  </div>
-
-  <div id="napaka">
-    Dostop zavrnjen – napačno geslo.
-  </div>
-
-  <script>
-    // 🔓 Trenutno je geslo onemogočeno – vsebina se vedno prikaže
-    window.onload = function () {
-      document.getElementById("vsebina").style.display = "block";
-    };
-
-    /*
-    // 🔐 Če želiš spet vklopiti zaščito z geslom, odkomentiraj to:
-
-    window.onload = function () {
-      var geslo = prompt("Za dostop vnesi geslo:");
-      if (geslo === "eva123") {
-        document.getElementById("vsebina").style.display = "block";
-      } else {
-        document.getElementById("vsebina").style.display = "none";
-        document.getElementById("napaka").style.display = "block";
-      }
-    };
-    */
-  </script>
 </body>
 </html>
+
+<!-- example: optimisation-case-1.html -->
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Optimisation case 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Optimisation case 1</h1>
+        <p>Miha Hafner, R&D engineer, Elea iC</p>
+    </header>
+    <main>
+        <p>Primer optimizacije 1 je …</p>
+        <div class="images">
+            <img src="opt1-1.jpg" alt="Slika Optimisation case 1 1">
+            <img src="opt1-2.jpg" alt="Slika Optimisation case 1 2">
+        </div>
+        <p><a href="index.html">Nazaj na o blogu [KLIK]</a></p>
+        <p><a href="index.html">Področja Data Engineering [KLIK]</a></p>
+    </main>
+</body>
+</html>
+
+<!-- style.css -->
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #004d66;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+}
+
+h1, h2 {
+    margin-bottom: 0.5em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.images img {
+    width: 100%;
+    max-width: 400px;
+    margin: 1em 0;
+    display: block;
+}
