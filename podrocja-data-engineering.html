@@ -1,59 +1,106 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-    <meta charset="UTF-8">
-    <title>Področja uporabe - primeri</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .grid-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1em;
-            padding: 1em;
-            list-style-type: none;
-        }
+  <meta charset="UTF-8">
+  <title>Področja uporabe - primeri</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-columns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1em;
+      padding: 2em;
+    }
 
-        .grid-links li {
-            background: #f0f0f0;
-            padding: 1em;
-            text-align: center;
-            border-radius: 6px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.05);
-        }
+    .grid-column {
+      background: #f8f8f8;
+      padding: 1em;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
 
-        .grid-links a {
-            text-decoration: none;
-            color: #004d66;
-            font-weight: bold;
-        }
+    .grid-column h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+      color: #004d66;
+    }
 
-        .grid-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .grid-column ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .grid-column li {
+      margin: 0.3em 0;
+    }
+
+    .grid-column a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .grid-column a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .grid-columns {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .grid-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
-    <h1>Področja uporabe - primeri</h1>
+  <h1>Področja uporabe - primeri</h1>
 </header>
 
 <main>
-    <ul class="grid-links">
+  <div class="grid-columns">
+
+    <div class="grid-column">
+      <h3>Optimisation and Solution Search</h3>
+      <ul>
         <li><a href="optimisation-case-1.html">Optimisation case 1</a></li>
         <li><a href="optimisation-case-2.html">Optimisation case 2</a></li>
+      </ul>
+    </div>
+
+    <div class="grid-column">
+      <h3>Data Analysis and Visualization</h3>
+      <ul>
         <li><a href="analysis-case-1.html">Data Analysis 1</a></li>
         <li><a href="analysis-case-2.html">Data Analysis 2</a></li>
+      </ul>
+    </div>
+
+    <div class="grid-column">
+      <h3>Processes Support</h3>
+      <ul>
         <li><a href="processes-case-1.html">Processes 1</a></li>
         <li><a href="processes-case-2.html">Processes 2</a></li>
+      </ul>
+    </div>
+
+    <div class="grid-column">
+      <h3>AI Systems Architectures</h3>
+      <ul>
         <li><a href="architecture-case-1.html">Architecture 1</a></li>
         <li><a href="architecture-case-2.html">Architecture 2</a></li>
-    </ul>
+      </ul>
+    </div>
 
-    <p style="text-align:center"><a href="index.html">← Nazaj na Kazalo</a></p>
+  </div>
+
+  <p style="text-align:center"><a href="index.html">← Nazaj na Kazalo</a></p>
 </main>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
