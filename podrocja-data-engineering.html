@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <title>Področja uporabe - primeri</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+            padding: 1em;
+            list-style-type: none;
+        }
+
+        .grid-links li {
+            background: #f0f0f0;
+            padding: 1em;
+            text-align: center;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+        }
+
+        .grid-links a {
+            text-decoration: none;
+            color: #004d66;
+            font-weight: bold;
+        }
+
+        .grid-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -28,4 +55,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
