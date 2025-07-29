@@ -44,6 +44,19 @@ img {
     margin: 1em 0;
 }
 
+.centered-grid-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    width: 100%;
+    max-width: 1200px;
+}
+
 /* script.js */
 // Trenutno prazno – pripravljeno za interaktivne funkcije
 console.log("JavaScript datoteka je naložena.");
