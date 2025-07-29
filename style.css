@@ -14,9 +14,9 @@ header {
 }
 main {
     padding: 2em;
-    max-width: 800px;
+    max-width: none;      /* 800px;*/
     margin: auto;
-    background: white;
+    background: none;             /*white;*/
 }
 h1, h2 {
     margin-bottom: 0.5em;
