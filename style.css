@@ -17,8 +17,8 @@ main {
     max-width: 900px;      /* 800px;*/
     margin: 0 auto;
     background: none;             /*white;*/
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    /*border-left: 1px solid #ddd;*/
+    /*border-right: 1px solid #ddd;*/
 }
 h1, h2 {
     margin-bottom: 0.5em;
