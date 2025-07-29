@@ -2,14 +2,13 @@
 <html lang="sl">
 <head>
   <meta charset="UTF-8">
-  <title>Tehnologije in Primeri</title>
+  <title>Področja uporabe - primeri</title>
   <link rel="stylesheet" href="style.css">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: sans-serif;
     }
 
     body {
@@ -17,6 +16,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: start;
+      font-family: sans-serif;
     }
 
     header {
@@ -30,56 +30,69 @@
     main {
       flex: 1;
       display: flex;
-      align-items: center;      /* vertical centering */
-      justify-content: center;  /* horizontal centering */
+      align-items: center;      /* vertical alignment */
+      justify-content: center;  /* horizontal alignment */
       padding: 2em;
       width: 100%;
     }
 
-    .two-columns {
+    .grid-columns {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2em;
-      max-width: 1000px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5em;
+      max-width: 1200px;
       width: 100%;
     }
 
-    .column {
+    .grid-column {
       background: #f8f8f8;
-      padding: 1.5em;
-      /*border-radius: 6px;*/
-      /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);*/
+      padding: 1em;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .column h3 {
-      text-align: center;
+    .grid-column h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
       color: #004d66;
-      margin-bottom: 1em;
     }
 
-    .column ul {
+    .grid-column ul {
       list-style-type: none;
       padding-left: 0;
       margin: 0;
     }
 
-    .column li {
-      padding: 0.4em 0;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+    .grid-column li {
+      margin: 0.3em 0;
     }
 
-    .column li:last-child {
-      border-bottom: none;
+    .grid-column a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .grid-column a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      margin: 2em 0 1em;
+      margin-top: 2em;
+      margin-bottom: 1em;
     }
 
-    @media screen and (max-width: 768px) {
-      .two-columns {
+    @media screen and (max-width: 1024px) {
+      .grid-columns {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .grid-columns {
         grid-template-columns: 1fr;
       }
     }
@@ -88,37 +101,41 @@
 <body>
 
 <header>
-  <h1>Tehnologije in pripadajoči primeri</h1>
+  <h1>Področja uporabe - primeri</h1>
 </header>
 
 <main>
-  <div class="two-columns">
+  <div class="grid-columns">
 
-    <div class="column">
-      <h3>Tehnologije</h3>
+    <div class="grid-column">
+      <h3>Optimisation and Solution Search</h3>
       <ul>
-        <li>Tehnologija 1</li>
-        <li>Tehnologija 2</li>
-        <li>Tehnologija 3</li>
-        <li>Tehnologija 4</li>
-        <li>Tehnologija 5</li>
-        <li>Tehnologija 6</li>
-        <li>Tehnologija 7</li>
-        <li>Tehnologija 8</li>
+        <li><a href="optimisation-case-1.html">Optimisation case 1</a></li>
+        <li><a href="optimisation-case-2.html">Optimisation case 2</a></li>
       </ul>
     </div>
 
-    <div class="column">
-      <h3>Primeri</h3>
+    <div class="grid-column">
+      <h3>Data Analysis and Visualization</h3>
       <ul>
-        <li><a href="Primer 1.html">Primer 1</a></li>
-        <li><a href="Primer 2.html">Primer 2</a></li>
-        <li><a href="Primer 3.html">Primer 3</a></li>
-        <li><a href="Primer 4.html">Primer 4</a></li>
-        <li><a href="Primer 5.html">Primer 5</a></li>
-        <li><a href="Primer 6.html">Primer 6</a></li>
-        <li><a href="Primer 7.html">Primer 7</a></li>
-        <li><a href="Primer 8.html">Primer 8</a></li>
+        <li><a href="analysis-case-1.html">Data Analysis 1</a></li>
+        <li><a href="analysis-case-2.html">Data Analysis 2</a></li>
+      </ul>
+    </div>
+
+    <div class="grid-column">
+      <h3>Processes Support</h3>
+      <ul>
+        <li><a href="processes-case-1.html">Processes 1</a></li>
+        <li><a href="processes-case-2.html">Processes 2</a></li>
+      </ul>
+    </div>
+
+    <div class="grid-column">
+      <h3>AI Systems Architectures</h3>
+      <ul>
+        <li><a href="architecture-case-1.html">Architecture 1</a></li>
+        <li><a href="architecture-case-2.html">Architecture 2</a></li>
       </ul>
     </div>
 
