@@ -2,13 +2,14 @@
 <html lang="sl">
 <head>
   <meta charset="UTF-8">
-  <title>Področja uporabe - primeri</title>
+  <title>Tehnologije in Primeri</title>
   <link rel="stylesheet" href="style.css">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      font-family: sans-serif;
     }
 
     body {
@@ -16,7 +17,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: start;
-      font-family: sans-serif;
     }
 
     header {
@@ -30,70 +30,61 @@
     main {
       flex: 1;
       display: flex;
-      align-items: center;      /* vertical alignment */
-      justify-content: center;  /* horizontal alignment */
+      justify-content: center;
       padding: 2em;
       width: 100%;
     }
 
-    .grid-columns {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5em;
-      max-width: 1200px;
+    table {
+      border-collapse: collapse;
       width: 100%;
-    }
-
-    .grid-column {
+      max-width: 1200px;
       background: #f8f8f8;
-      padding: 1em;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
-    .grid-column h3 {
-      font-size: 1.1em;
-      margin-bottom: 0.5em;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75em;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e0f2f5;
       color: #004d66;
     }
 
-    .grid-column ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .grid-column li {
-      margin: 0.3em 0;
-    }
-
-    .grid-column a {
+    td a {
       text-decoration: none;
       color: #0077cc;
     }
 
-    .grid-column a:hover {
+    td a:hover {
       text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      margin-top: 2em;
-      margin-bottom: 1em;
+      margin: 2em 0 1em;
     }
 
-    @media screen and (max-width: 1024px) {
-      .grid-columns {
-        grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
       }
-    }
 
-    @media screen and (max-width: 600px) {
-      .grid-columns {
-        grid-template-columns: 1fr;
+      tr {
+        margin-bottom: 1em;
+        border-bottom: 2px solid #ccc;
+      }
+
+      td, th {
+        text-align: left;
+        padding-left: 1em;
+        border: none;
+      }
+
+      th {
+        background: none;
       }
     }
   </style>
@@ -101,45 +92,79 @@
 <body>
 
 <header>
-  <h1>Področja uporabe - primeri</h1>
+  <h1>Tehnologije in pripadajoči primeri</h1>
 </header>
 
 <main>
-  <div class="grid-columns">
-
-    <div class="grid-column">
-      <h3>Optimisation and Solution Search</h3>
-      <ul>
-        <li><a href="optimisation-case-1.html">Optimisation case 1</a></li>
-        <li><a href="optimisation-case-2.html">Optimisation case 2</a></li>
-      </ul>
-    </div>
-
-    <div class="grid-column">
-      <h3>Data Analysis and Visualization</h3>
-      <ul>
-        <li><a href="analysis-case-1.html">Data Analysis 1</a></li>
-        <li><a href="analysis-case-2.html">Data Analysis 2</a></li>
-      </ul>
-    </div>
-
-    <div class="grid-column">
-      <h3>Processes Support</h3>
-      <ul>
-        <li><a href="processes-case-1.html">Processes 1</a></li>
-        <li><a href="processes-case-2.html">Processes 2</a></li>
-      </ul>
-    </div>
-
-    <div class="grid-column">
-      <h3>AI Systems Architectures</h3>
-      <ul>
-        <li><a href="architecture-case-1.html">Architecture 1</a></li>
-        <li><a href="architecture-case-2.html">Architecture 2</a></li>
-      </ul>
-    </div>
-
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Tehnologija</th>
+        <th>Primer 1</th>
+        <th>Primer 2</th>
+        <th>Primer 3</th>
+        <th>Primer 4</th>
+        <th>Primer 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tehnologija 1</td>
+        <td><a href="primer1-1.html">Primer 1.1</a></td>
+        <td><a href="primer1-2.html">Primer 1.2</a></td>
+        <td><a href="primer1-3.html">Primer 1.3</a></td>
+        <td><a href="primer1-4.html">Primer 1.4</a></td>
+        <td><a href="primer1-5.html">Primer 1.5</a></td>
+      </tr>
+      <tr>
+        <td>Tehnologija 2</td>
+        <td><a href="primer2-1.html">Primer 2.1</a></td>
+        <td><a href="primer2-2.html">Primer 2.2</a></td>
+        <td colspan="3">—</td>
+      </tr>
+      <tr>
+        <td>Tehnologija 3</td>
+        <td><a href="primer3-1.html">Primer 3.1</a></td>
+        <td><a href="primer3-2.html">Primer 3.2</a></td>
+        <td><a href="primer3-3.html">Primer 3.3</a></td>
+        <td colspan="2">—</td>
+      </tr>
+      <tr>
+        <td>Tehnologija 4</td>
+        <td><a href="primer4-1.html">Primer 4.1</a></td>
+        <td><a href="primer4-2.html">Primer 4.2</a></td>
+        <td><a href="primer4-3.html">Primer 4.3</a></td>
+        <td><a href="primer4-4.html">Primer 4.4</a></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Tehnologija 5</td>
+        <td><a href="primer5-1.html">Primer 5.1</a></td>
+        <td><a href="primer5-2.html">Primer 5.2</a></td>
+        <td colspan="3">—</td>
+      </tr>
+      <tr>
+        <td>Tehnologija 6</td>
+        <td><a href="primer6-1.html">Primer 6.1</a></td>
+        <td><a href="primer6-2.html">Primer 6.2</a></td>
+        <td><a href="primer6-3.html">Primer 6.3</a></td>
+        <td colspan="2">—</td>
+      </tr>
+      <tr>
+        <td>Tehnologija 7</td>
+        <td><a href="primer7-1.html">Primer 7.1</a></td>
+        <td><a href="primer7-2.html">Primer 7.2</a></td>
+        <td><a href="primer7-3.html">Primer 7.3</a></td>
+        <td><a href="primer7-4.html">Primer 7.4</a></td>
+        <td><a href="primer7-5.html">Primer 7.5</a></td>
+      </tr>
+      <tr>
+        <td>Tehnologija 8</td>
+        <td><a href="primer8-1.html">Primer 8.1</a></td>
+        <td colspan="4">—</td>
+      </tr>
+    </tbody>
+  </table>
 </main>
 
 <footer>
