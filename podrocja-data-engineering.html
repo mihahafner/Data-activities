@@ -5,11 +5,18 @@
   <title>Področja uporabe - primeri</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    .centered-grid-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
     .grid-columns {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1em;
       padding: 2em;
+      max-width: 1200px;
+      width: 100%;
     }
 
     .grid-column {
@@ -62,40 +69,42 @@
 </header>
 
 <main>
-  <div class="grid-columns">
+  <div class="centered-grid-wrapper">
+    <div class="grid-columns">
 
-    <div class="grid-column">
-      <h3>Optimisation and Solution Search</h3>
-      <ul>
-        <li><a href="optimisation-case-1.html">Optimisation case 1</a></li>
-        <li><a href="optimisation-case-2.html">Optimisation case 2</a></li>
-      </ul>
+      <div class="grid-column">
+        <h3>Optimisation and Solution Search</h3>
+        <ul>
+          <li><a href="optimisation-case-1.html">Optimisation case 1</a></li>
+          <li><a href="optimisation-case-2.html">Optimisation case 2</a></li>
+        </ul>
+      </div>
+
+      <div class="grid-column">
+        <h3>Data Analysis and Visualization</h3>
+        <ul>
+          <li><a href="analysis-case-1.html">Data Analysis 1</a></li>
+          <li><a href="analysis-case-2.html">Data Analysis 2</a></li>
+        </ul>
+      </div>
+
+      <div class="grid-column">
+        <h3>Processes Support</h3>
+        <ul>
+          <li><a href="processes-case-1.html">Processes 1</a></li>
+          <li><a href="processes-case-2.html">Processes 2</a></li>
+        </ul>
+      </div>
+
+      <div class="grid-column">
+        <h3>AI Systems Architectures</h3>
+        <ul>
+          <li><a href="architecture-case-1.html">Architecture 1</a></li>
+          <li><a href="architecture-case-2.html">Architecture 2</a></li>
+        </ul>
+      </div>
+
     </div>
-
-    <div class="grid-column">
-      <h3>Data Analysis and Visualization</h3>
-      <ul>
-        <li><a href="analysis-case-1.html">Data Analysis 1</a></li>
-        <li><a href="analysis-case-2.html">Data Analysis 2</a></li>
-      </ul>
-    </div>
-
-    <div class="grid-column">
-      <h3>Processes Support</h3>
-      <ul>
-        <li><a href="processes-case-1.html">Processes 1</a></li>
-        <li><a href="processes-case-2.html">Processes 2</a></li>
-      </ul>
-    </div>
-
-    <div class="grid-column">
-      <h3>AI Systems Architectures</h3>
-      <ul>
-        <li><a href="architecture-case-1.html">Architecture 1</a></li>
-        <li><a href="architecture-case-2.html">Architecture 2</a></li>
-      </ul>
-    </div>
-
   </div>
 
   <p style="text-align:center"><a href="index.html">← Nazaj na Kazalo</a></p>
